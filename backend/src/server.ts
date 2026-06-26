@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;
 
 function gerarCodigo(): string {
   return "#" + Math.floor(100000 + Math.random() * 900000);
@@ -228,5 +228,5 @@ app.get("/api/pedidos", async (req: Request, res: Response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`API ReVest rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
