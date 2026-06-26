@@ -5,12 +5,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const client_1 = require("@prisma/client");
+require("dotenv/config");
+const client_1 = require("./generated/prisma/client");
+const adapter_pg_1 = require("@prisma/adapter-pg");
+if (!process.env.DATABASE_URL) {
+    throw new Error("DATABASE_URL não encontrada no .env");
+}
+const adapter = new adapter_pg_1.PrismaPg({
+    connectionString: process.env.DATABASE_URL,
+});
+const prisma = new client_1.PrismaClient({
+    adapter,
+});
 const app = (0, express_1.default)();
-const prisma = new client_1.PrismaClient();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;
 function gerarCodigo() {
     return "#" + Math.floor(100000 + Math.random() * 900000);
 }
@@ -197,5 +207,5 @@ app.get("/api/pedidos", async (req, res) => {
     }
 });
 app.listen(PORT, () => {
-    console.log(`API ReVest rodando em http://localhost:${PORT}`);
+    console.log(`Servidor rodando na porta ${PORT}`);
 });

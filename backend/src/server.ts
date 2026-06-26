@@ -1,11 +1,15 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import "dotenv/config";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "./generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL não encontrada no .env");
+}
+
 const adapter = new PrismaPg({
-  connectionString: process.env.DATABASE_URL!,
+  connectionString: process.env.DATABASE_URL,
 });
 
 const prisma = new PrismaClient({
