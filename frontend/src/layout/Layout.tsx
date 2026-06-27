@@ -2,7 +2,6 @@ import { useEffect, useState, type ReactNode } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 
-
 interface LayoutProps {
   children: ReactNode;
 }
