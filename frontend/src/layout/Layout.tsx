@@ -1,6 +1,8 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
+
+
 interface LayoutProps {
   children: ReactNode;
 }
@@ -62,7 +64,9 @@ export default function Layout({ children }: LayoutProps) {
       <header className="rv-header">
         {/* Logo */}
         <NavLink to="/" className="rv-logo" onClick={fecharTudo}>
-          <span className="rv-logo-icone">R</span>
+          <div className="logo-circle">
+            <img src="/logo2.png" alt="Logo ReVest" className="logo-img" />
+          </div>
           <span className="rv-logo-texto">ReVest</span>
         </NavLink>
 

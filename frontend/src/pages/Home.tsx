@@ -5,6 +5,7 @@ export default function Home() {
     <main className="home-profissional">
       <section className="hero">
         <div>
+          
           <span className="tag">Gráfica online personalizada</span>
           <h1>ReVest</h1>
           <p>Produtos personalizados com qualidade profissional para empresas, eventos, uniformes, brindes e materiais promocionais.</p>

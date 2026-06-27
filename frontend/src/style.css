@@ -1281,3 +1281,24 @@ textarea {
   }
 
 }
+
+.logo-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050816;
+  box-shadow:
+    0 0 16px rgba(0, 238, 255, 0.7),
+    0 0 24px rgba(255, 0, 200, 0.45);
+}
+
+.logo-img {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  object-position: center;
+}
