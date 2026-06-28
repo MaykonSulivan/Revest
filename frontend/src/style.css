@@ -673,3 +673,22 @@ textarea {
   align-items: center;
   justify-content: space-between;
 }
+
+.botao-whatsapp-resumo {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #35c8f4, #35e28a);
+  color: #031014;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao-whatsapp-resumo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(53, 226, 138, 0.25);
+}
