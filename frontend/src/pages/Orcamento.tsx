@@ -183,6 +183,8 @@ export default function Orcamento() {
 
         </form>
 
+
+
         <aside className="quote-summary">
           <span className="eyebrow">Resumo em tempo real</span>
           <h2>{produtoSelecionado?.nome}</h2>
@@ -214,13 +216,16 @@ export default function Orcamento() {
             <span>Restante 50%</span>
             <strong>{formatarMoeda(resultado.valorRestante)}</strong>
           </div>
-          <button
-            type="submit"
-            className="botao-whatsapp botao-whatsapp-resumo"
-          >
-            Enviar orçamento pelo WhatsApp
-          </button>
-          
+          <form id="form-orcamento" onSubmit={enviarWhatsapp}>
+            <button
+              type="submit"
+              form="form-orcamento"
+              className="botao-whatsapp botao-whatsapp-resumo"
+            >
+              Enviar orçamento pelo WhatsApp
+            </button>
+          </form>
+
           <div className="rules-box">
             <h3>Forma de pagamento</h3>
             <ul>
