@@ -1,21 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./style.css";
-
 import Layout from "./layout/Layout";
-import Cadastro from "./pages/Cadastro";
-import Carrinho from "./pages/Carrinho";
 import Contato from "./pages/Contato";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import Orcamento from "./pages/Orcamento";
-import Painel from "./pages/Painel";
 import Produtos from "./pages/Produtos";
 
 const elementoRoot = document.getElementById("root");
@@ -32,17 +22,15 @@ ReactDOM.createRoot(elementoRoot).render(
           <Route path="/" element={<Home />} />
           <Route path="/produtos" element={<Produtos />} />
           <Route path="/orcamento" element={<Orcamento />} />
-          <Route path="/painel" element={<Painel />} />
           <Route path="/contato" element={<Contato />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/carrinho" element={<Carrinho />} />
 
-          {/* Rota para página inexistente */}
+          {/* Rotas de login, cadastro, painel e carrinho foram removidas.
+              Agora o fluxo profissional é direto: cliente calcula orçamento e envia no WhatsApp. */}
           <Route
             path="*"
             element={
-              <main className="page">
+              <main className="page page-centered">
+                <span className="eyebrow">404</span>
                 <h1>Página não encontrada</h1>
                 <p>A página que você tentou acessar não existe.</p>
               </main>
@@ -51,5 +39,5 @@ ReactDOM.createRoot(elementoRoot).render(
         </Routes>
       </Layout>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

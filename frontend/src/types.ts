@@ -1,52 +1,32 @@
-export interface Usuario {
-  id?: number;
-  codigo?: string;
-  name: string;
-  email: string;
-  ultimoLogin?: string;
-}
-
-export interface ItemCarrinho {
-  id: number;
-  nome: string;
-  preco: number;
-  quantidade: number;
-  cliente?: string;
-  telefone?: string;
-  cidade?: string;
-  tamanho?: string;
-  cor?: string;
-  observacao?: string;
-}
+// Tipos centrais do orçamento.
+// Mantendo estes tipos em um arquivo separado, o projeto fica mais organizado
+// e fácil de manter quando novos tecidos ou regras forem adicionados.
+export type Tamanho = "PP" | "P" | "M" | "G" | "GG" | "XG" | "XXG";
 
 export interface Produto {
   id: number;
   nome: string;
-  preco: number;
-  precoAtacado: number;
+  descricao: string;
+  precoUnitario: number;
+  precoComDesconto: number;
 }
 
-export interface Pedido {
-  id: number;
-  codigo: string;
-  productName: string;
-  quantity: number;
-  total: number;
+export interface QuantidadesPorTamanho {
+  PP: number;
+  P: number;
+  M: number;
+  G: number;
+  GG: number;
+  XG: number;
+  XXG: number;
 }
 
-export interface RespostaAutenticacao extends Usuario {
-  token?: string;
-  erro?: string;
-}
-
-export function lerLocalStorage<T>(chave: string, padrao: T): T {
-  const valor = localStorage.getItem(chave);
-
-  if (!valor) return padrao;
-
-  try {
-    return JSON.parse(valor) as T;
-  } catch {
-    return padrao;
-  }
+export interface ResultadoOrcamento {
+  quantidadeTotal: number;
+  valorUnitarioAplicado: number;
+  possuiDesconto: boolean;
+  prazoProducao: string;
+  valorTotalBruto: number;
+  valorEntrada: number;
+  valorRestante: number;
 }

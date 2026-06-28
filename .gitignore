@@ -1,0 +1,18 @@
+# Dependências
+node_modules/
+
+# Builds
+dist/
+build/
+
+# Variáveis locais
+.env
+.env.local
+
+# Arquivos do sistema/editor
+.DS_Store
+.vscode/
+
+# Prisma/SQLite antigos removidos do fluxo atual
+*.db
+backend/src/generated/
