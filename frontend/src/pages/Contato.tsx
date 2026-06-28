@@ -10,15 +10,15 @@ export default function Contato() {
       <section className="contact-grid">
         <article className="feature-card">
           <h2>WhatsApp</h2>
-          <p>(92) 99148-9340</p>
+          <p>(92) 99519-1740</p>
         </article>
         <article className="feature-card">
           <h2>Horário</h2>
-          <p>Segunda a sexta, das 08h às 17h.</p>
+          <p>Segunda a sexta, das 08h às 16h.</p>
         </article>
         <article className="feature-card">
           <h2>Entregas</h2>
-          <p>Retirada, Uber Entrega ou entrega própria entre 18h e 21h, conforme rota disponível.</p>
+          <p>Retirada, Uber Entrega ou entrega própria entre 08h e 16h, conforme rota disponível.</p>
         </article>
       </section>
     </main>
