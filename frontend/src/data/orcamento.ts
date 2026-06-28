@@ -3,7 +3,7 @@ import type { Produto, QuantidadesPorTamanho, ResultadoOrcamento, Tamanho } from
 // Número que receberá os orçamentos pelo WhatsApp.
 // Troque somente este valor se o número da empresa mudar.
 // Formato: código do país + DDD + número, sem espaços, traços ou parênteses.
-export const WHATSAPP_EMPRESA = "5592991489340";
+export const WHATSAPP_EMPRESA = "5592995191740";
 
 export const tamanhos: Tamanho[] = ["PP", "P", "M", "G", "GG", "XG", "XXG"];
 

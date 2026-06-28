@@ -663,3 +663,13 @@ textarea {
     flex-direction: column;
   }
 }
+.logo-menu {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+.mobile-menu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

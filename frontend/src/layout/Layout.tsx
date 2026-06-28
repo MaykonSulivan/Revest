@@ -30,7 +30,7 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <header className="site-header">
         <NavLink to="/" className="brand" onClick={() => setMenuAberto(false)}>
-          <span className="brand-mark">R</span>
+          <img src="/logo2.png" alt="ReVest" className="logo-menu" />
           <span>
             <strong>ReVest</strong>
             <small>Estamparia personalizada</small>
